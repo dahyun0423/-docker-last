@@ -51,9 +51,9 @@ jobs:
     - name : docker compose 실행(mysql, spring, nginx 실행)
       uses: appleboy/ssh-action@master
       with:
-            host: ${{ secrets.SSH_HOST }}
-            username: ubuntu
-            key: ${{ secrets.SSH_KEY }}
-            script: |
-              cd ~/docker-last
-              docker compose up -d
+        host: ${{ secrets.SSH_HOST }}
+        username: ubuntu
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ~/docker-last
+          docker compose up -d
